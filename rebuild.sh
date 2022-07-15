@@ -1,0 +1,1 @@
+g++ -g3 -o main main.cpp && gdbserver :2000 main

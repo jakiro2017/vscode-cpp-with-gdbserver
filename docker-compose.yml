@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  dev:
+    build:
+      context: .
+      # dockerfile: Dockerfile.dev
+    ports:
+      - 192.168.22.53:2000:2000
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - .:/code/
+    environment:
+      DEV: 'True'
+    # env_file: local.env
